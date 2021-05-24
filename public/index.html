@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ninja Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shoe stores Nigerian </title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/flexslider.css">
+    <!-- <link rel="stylesheet" href="./css/owl.carousel.min.css"> -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 <style>
-    body{
-        overflow: scroll;
-    }
     ol, .h{
         padding-bottom: 10px;
 
@@ -47,7 +47,7 @@
         /* width: 1913px; */
         /* height: 857px; */
 
-        background: rgba(255, 237, 206, 0.58);
+        background: rgba(209, 153, 56, 0.58);
 
     }
     .j{
@@ -60,56 +60,241 @@
         /* background: url(./assets/berkin1.jpeg); */
         border-radius: 46px;
     }
+
+    .after_burger > ul {
+        background-color: rgb(22, 18, 12);
+    }
+
+    #hero .flexslider {
+    border: none;
+    z-index: 1;
+    margin-bottom: 0; }
+    #hero .flexslider .slides {
+      position: relative;
+      overflow: hidden; }
+      #hero .flexslider .slides li {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 650px;
+        position: relative; }
+        #hero .flexslider .slides li .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.1); }
+    /* #hero .flexslider .flex-control-nav {
+      display: none; }
+    #hero .flexslider .flex-direction-nav a:before {
+      content: '\e0c2';
+      color: white;
+      text-shadow: none !important; }
+    #hero .flexslider .flex-direction-nav a.flex-next:before {
+      content: '\e0c3'; }
+    #hero .flexslider .flex-direction-nav a {
+      margin: 0;
+      height: 70px; } */
+
+
+
+      .navigation {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(209, 153, 56, 0.58);
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    padding-top: 0px;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation ul {
+    margin-top:30px;
+    text-align:center;
+    list-style:none; 
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.menulist {
+    width:200px;
+}
+
+
+.logo {
+    text-align:center;
+    margin:0 auto;
+}
+
+.line1, .line2, .line3 {
+  margin-top:5px;
+  background-color:#fff;
+  width:25px;
+  height:3px;
+  display:block;
+  position:relative;
+  opacity:1.0;
+  border-radius:15%;
+  transition: all .3s;
+}
+
+.line1.active {
+  transform: rotate(270deg);
+  opacity:0.0;
+  background-color:yellow;
+  top:5px;
+}
+
+.line2.active {
+  transform: rotate(45deg);
+  background-color:yellow;
+}
+
+.line3.active {
+  transform: rotate(-45deg);
+  background-color:yellow;
+  top:-7px;
+}
+
+.menuitems {
+    padding-top:12px;
+    padding-bottom:12px;
+    text-decoration: none;
+    list-style:none; 
+    font-weight: 200;
+    font-size: 24px;
+    display: inline-block;
+    position:relative;	
+    text-align:center;
+    color: #fff;
+    opacity:0.0;
+    transition: all .5s ease-in-out;
+}
+
+.menuitems:after {
+  content:'';
+  display:block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width .2s;
+}
+
+.menuitems:hover::after {
+    width:100%;
+}
+
+#closebtn {
+    height:25px;
+    width:25px;	
+    position: absolute;
+    text-decoration:none;
+    top: 10px;
+    left: 25px;
+    font-size: 36px !important;
+    margin-right: 50px;
+    z-index:100;
+    color:#fff;
+    cursor:pointer;
+    trainsition:background-position .3s;
+}
+
+#main {	
+    transition: margin-top .4s;
+    text-align:center;
+    margin:auto;
+    padding: 16px;
+    font-size:30px;
+}
+
 </style>
 </head>
 <body class="text-gray-600 font-sans">
-    <main class="i h-auto z-20">
-        <div class="grid grid-cols-3  p-5 border-b-2 w-full ">
+    <main class=" i h-auto z-20 " id="page">
+        <div class="hidden md:grid grid-cols-3  p-5 border-b-2 w-full ">
            <div class="grid col-span-2 text-2xl font-bold text-gray-700 underline  transition duration-400 ease-in transform hover:-translate-y-1 hover:scale-100">LOGO</div>
            <div class=" grid col-span-1 pr-3">
-               <nav>
-                   <div class=" flex md:hidden justify-end burger cursor-pointer"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                      </svg>
-                   </div>
-                   <ul class=" hidden md:flex justify-between">
+               <nav class="canvas">
+
+                   <ul class=" hidden md:flex justify-between one">
                        <li><a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                          </svg>
+                          </svg> -->
+                          Boots
                        </a></li>
                        <li><a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                          </svg>
+                          </svg> -->
+                          Sandals
                        </a></li>
                        <li><a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                          </svg>
+                          </svg> -->
+                          Slippers
                        </a></li>
                        <li><a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
+                          </svg> -->
+                          Flip Flops
                        </a></li>
                    </ul>
                </nav>
            </div>
         </div>
 
-       <div class="flex z-0">
+        <div id="topNav" class="navigation md:hidden">
+            <span id="closebtn" onclick="navToggle()">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </span>
+          <div class="logo">
+            <img src=""/>
+          </div>
+          
+          <ul class="menulist font-sans">
+            <li><a class="menuitems" href="#">Boots</a></li>		
+            <li><a class="menuitems" href="#">Sandals</a></li>				
+            <li><a class="menuitems" href="#">Slippers</a></li>
+            <li><a class="menuitems" href="#">Flip Flops</a></li>
+          </ul>			
+          </div>
+          
+          <div id="main">
+          </div>
+
+       <!-- <div class="flex z-0">
         <svg width="1895" height="485" viewBox="0 0 1895 485" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1039 30C957 -140 0.5 484.5 0.5 484.5H1894.5C1894.5 484.5 1376.5 390 1581.5 271.5C1786.5 153 1121 200 1039 30Z" fill="#F8DAA8"/>
             </svg>
             
-            
-            
-            
-            
-            
-       </div>
+       </div> -->
+       <aside id="hero">
+        <div class="flexslider">
+            <ul class="slides">
+               <li style="background-image: url(./assets/crop1.jpeg);">
+               </li>
+               <li style="background-image: url(./assets/crop8.jpeg);">
+               </li>
+               <li style="background-image: url(./assets/crop3.jpeg);">
+               </li>
+               <li style="background-image: url(./assets/crop4.jpeg);">
+               </li>
+              </ul>
+          </div>
+    </aside>
     </main>
 
       <div class="flex flex-wrap m-4">
@@ -216,8 +401,6 @@
             </div>
         </div>
       </div>
-
-
 
 
     <footer class="iii w-full bg-gray-100">
@@ -440,6 +623,11 @@
       <div class="copyright flex justify-center m-1">&copy;LOGO All rigths reserved</div>
 </div>
     </footer>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/jquery.flexslider-min.js"></script>
+       
+        <!-- <script src="./js/owl.carousel.min.js"></script> -->
+        <script src="./js/main.js"></script>
 </body>
 </html>
 
